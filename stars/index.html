@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <title>Stars</title>
+  <--<link rel="icon" type="image/png" href="icon.png"/>-->
+</head>
+<script src="wasm_exec.js"></script>
+<script>
+// Polyfill
+if (!WebAssembly.instantiateStreaming) {
+  WebAssembly.instantiateStreaming = async (resp, importObject) => {
+    const source = await (await resp).arrayBuffer();
+    return await WebAssembly.instantiate(source, importObject);
+  };
+}
+
+const go = new Go();
+WebAssembly.instantiateStreaming(fetch("stars.wasm"), go.importObject).then(result => {
+  go.run(result.instance);
+});
+</script>
+<body>
+  <p>Loading...</p>
+</body>
+</html>
