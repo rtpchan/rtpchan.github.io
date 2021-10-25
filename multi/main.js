@@ -1858,8 +1858,8 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 		flagDecoder,
 		args,
 		impl.aB,
-		impl.aK,
-		impl.aI,
+		impl.aJ,
+		impl.aH,
 		function() { return function() {} }
 	);
 });
@@ -3929,10 +3929,10 @@ var _Browser_element = _Debugger_element || F4(function(impl, flagDecoder, debug
 		flagDecoder,
 		args,
 		impl.aB,
-		impl.aK,
-		impl.aI,
+		impl.aJ,
+		impl.aH,
 		function(sendToApp, initialModel) {
-			var view = impl.aL;
+			var view = impl.aK;
 			/**/
 			var domNode = args['node'];
 			//*/
@@ -3965,11 +3965,11 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 		flagDecoder,
 		args,
 		impl.aB,
-		impl.aK,
-		impl.aI,
+		impl.aJ,
+		impl.aH,
 		function(sendToApp, initialModel) {
 			var divertHrefToApp = impl.P && impl.P(sendToApp)
-			var view = impl.aL;
+			var view = impl.aK;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
 			var currNode = _VirtualDom_virtualize(bodyNode);
@@ -3982,7 +3982,7 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 				bodyNode = _VirtualDom_applyPatches(bodyNode, currNode, patches, sendToApp);
 				currNode = nextNode;
 				_VirtualDom_divertHrefToApp = 0;
-				(title !== doc.aJ) && (_VirtualDom_doc.title = title = doc.aJ);
+				(title !== doc.aI) && (_VirtualDom_doc.title = title = doc.aI);
 			});
 		}
 	);
@@ -4038,8 +4038,8 @@ function _Browser_makeAnimator(model, draw)
 
 function _Browser_application(impl)
 {
-	var onUrlChange = impl.aE;
-	var onUrlRequest = impl.aF;
+	var onUrlChange = impl.aD;
+	var onUrlRequest = impl.aE;
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
@@ -4073,9 +4073,9 @@ function _Browser_application(impl)
 		{
 			return A3(impl.aB, flags, _Browser_getUrl(), key);
 		},
-		aL: impl.aL,
 		aK: impl.aK,
-		aI: impl.aI
+		aJ: impl.aJ,
+		aH: impl.aH
 	});
 }
 
@@ -5221,15 +5221,15 @@ var $elm$core$Task$perform = F2(
 			A2($elm$core$Task$map, toMessage, task));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Main$Model = F9(
-	function (one, two, guess, ans, nextButton, score, timer, timeRemain, mode) {
-		return {L: ans, z: guess, l: mode, aD: nextButton, E: one, v: score, w: timeRemain, K: timer, H: two};
+var $author$project$Main$Model = F8(
+	function (one, two, guess, ans, score, timer, timeRemain, mode) {
+		return {L: ans, z: guess, l: mode, E: one, v: score, w: timeRemain, K: timer, H: two};
 	});
 var $author$project$Main$PreGame = 0;
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$Main$init = function (_v0) {
-	var m = A9($author$project$Main$Model, 0, 0, '', '', 'disabled', 0, 0, 144, 0);
+	var m = A8($author$project$Main$Model, 0, 0, '', '', 0, 0, 144, 0);
 	return _Utils_Tuple2(m, $elm$core$Platform$Cmd$none);
 };
 var $author$project$Main$EnterPressed = function (a) {
@@ -6087,13 +6087,12 @@ var $author$project$Main$newNumbers = function (model) {
 		$elm$random$Random$map2,
 		F2(
 			function (x, y) {
-				return A9(
+				return A8(
 					$author$project$Main$Model,
 					x,
 					y,
 					'',
 					$elm$core$String$fromInt(x * y),
-					'disabled',
 					model.v,
 					model.K,
 					model.w,
@@ -6291,7 +6290,7 @@ var $author$project$Main$view = function (model) {
 						_List_Nil,
 						_List_fromArray(
 							[
-								$elm$html$Html$text('144 seconds multiplication charllenge.')
+								$elm$html$Html$text('12² seconds multiplication challenge.')
 							])),
 						A2(
 						$elm$html$Html$p,
@@ -6508,6 +6507,6 @@ var $author$project$Main$view = function (model) {
 	}
 };
 var $author$project$Main$main = $elm$browser$Browser$element(
-	{aB: $author$project$Main$init, aI: $author$project$Main$subscriptions, aK: $author$project$Main$update, aL: $author$project$Main$view});
+	{aB: $author$project$Main$init, aH: $author$project$Main$subscriptions, aJ: $author$project$Main$update, aK: $author$project$Main$view});
 _Platform_export({'Main':{'init':$author$project$Main$main(
 	$elm$json$Json$Decode$succeed(0))(0)}});}(this));
