@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on i ate a rock</title>
+    <link>https://www.iatearock.com/news/</link>
+    <description>Recent content in News on i ate a rock</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>iatearock ©</copyright>
+    <lastBuildDate>Sun, 12 Feb 2023 09:36:14 -0600</lastBuildDate><atom:link href="https://www.iatearock.com/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shark eats fish</title>
+      <link>https://www.iatearock.com/news/01shark/</link>
+      <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.iatearock.com/news/01shark/</guid>
+      <description>Shark bought fish in a fish and chip shop</description>
+    </item>
+    
+  </channel>
+</rss>
